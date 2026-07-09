@@ -1,0 +1,28 @@
+@__HostAddress = http://localhost:5162
+
+### Get all posts
+GET {{__HostAddress}}/api/posts
+Accept: application/json
+
+### Create a post
+
+POST {{__HostAddress}}/api/posts
+Content-Type: application/json
+
+{
+  "content": "Excited to share my latest LinkedIn post!",
+  "scheduledAt": "2026-07-11T10:00:00Z"
+}
+
+### Get post by id (replace GUID)
+
+GET {{__HostAddress}}/api/posts/00000000-0000-0000-0000-000000000000
+Accept: application/json
+
+### Publish a post (replace GUID)
+
+PATCH {{__HostAddress}}/api/posts/00000000-0000-0000-0000-000000000000/publish
+
+### Delete a post (replace GUID)
+
+DELETE {{__HostAddress}}/api/posts/00000000-0000-0000-0000-000000000000
